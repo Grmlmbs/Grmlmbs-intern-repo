@@ -26,15 +26,15 @@ git\_understanding
 
 
 
-**What makes a good commit message?** 
+**What makes a good commit message?**
 
 
 
-&#x09;Good commit messages are usually short, specific, and action-oriented. It includes new features added, fixes made, refactors, documentation, style, test and maintenance. 
+&#x09;Good commit messages are usually short, specific, and action-oriented. It includes new features added, fixes made, refactors, documentation, style, test and maintenance.
 
 
 
-**How does a clear commit message help in team collaboration?** 
+**How does a clear commit message help in team collaboration?**
 
 &#x09;
 
@@ -47,4 +47,28 @@ git\_understanding
 
 
 &#x09;Poor commit messages such as vague messages, ambiguous, or lacks conclusive details can make debugging later on if it caused any issues. And that on its own can cost the organization money, time and effort just to figure out what went wrong.
+
+
+
+**What does git bisect do?** 
+
+
+
+&#x09;Git bisect is a git tool used to find the exact commit that introduced a bug by doing a search that cuts the search space repeatedly until it identifies the problematic commit.
+
+
+
+**When would you use it in a real-world debugging situation?** 
+
+
+
+&#x09;You would use it to find which commits or what changes lead to the issues you are currently experiencing. This would help you pinpoint what to fix and what to do to resolve the issue.
+
+
+
+**How does it compare to manually reviewing commits?** 
+
+&#x09;
+
+&#x09;Manually reviewing commits would take you more time just to identify a problem as supposed to using git bisect, you can find the problem faster and resolve the issue in a much earlier time.
 
