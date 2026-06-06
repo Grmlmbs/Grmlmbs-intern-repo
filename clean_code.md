@@ -514,6 +514,26 @@ public class OrderProcessor {
 
 
 
+**What were the issues with duplicated code?**
+
+
+
+&#x09;Duplicated makes your code take up unnecessary storage space and it make the code run slower unnecessarily as it have to read those inputs still before processing. 
+
+
+
+**How did refactoring improve maintainability?**
+
+
+
+&#x09;Refactoring makes code much more readable and simpler. It also makes it so that we only need to change a specific section rather than the whole codebase. 
+
+
+
+
+
+
+
 
 
 
