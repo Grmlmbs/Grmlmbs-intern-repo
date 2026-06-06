@@ -952,3 +952,29 @@ public class OrderSystem {
 
 
 
+
+
+
+
+**Why is code formatting important?**
+
+
+
+&#x09;Formatting improves code readability and overall structure much more easier to handle and review.
+
+
+
+**What issues did the linter detect?**
+
+
+
+&#x20;	It checks for possible bugs, errors and grammatical issues in the code early, inconsistent styles, suspicious logic and maintainability issues.
+
+
+
+**Did formatting the code make it easier to read?**
+
+
+
+&#x09;Yes, it made the code easier to read.
+
