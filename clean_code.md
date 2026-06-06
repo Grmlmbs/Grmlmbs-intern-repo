@@ -56,7 +56,7 @@ public class Main {
 
 
 
-**What makes a good variable or function name?** 
+**What makes a good variable or function name?**
 
 
 
@@ -64,7 +64,7 @@ public class Main {
 
 
 
-**What issues can arise from poorly named variables?** 
+**What issues can arise from poorly named variables?**
 
 
 
@@ -258,7 +258,7 @@ public class OrderProcessor {
 
 
 
-**Cleaned code:** 
+**Cleaned code:**
 
 
 
@@ -284,7 +284,7 @@ public class OrderProcessor {
 
 &#x20;       double finalTotal = applyTax(total - discount);
 
-&#x20;       
+&#x20;
 
 &#x20;       printReceipt(customerName, email, items, prices, total, discount, finalTotal);
 
@@ -498,7 +498,7 @@ public class OrderProcessor {
 
 }
 
-**Why is breaking down function beneficial?** 
+**Why is breaking down function beneficial?**
 
 
 
@@ -518,7 +518,7 @@ public class OrderProcessor {
 
 
 
-&#x09;Duplicated makes your code take up unnecessary storage space and it make the code run slower unnecessarily as it have to read those inputs still before processing. 
+&#x09;Duplicated makes your code take up unnecessary storage space and it make the code run slower unnecessarily as it have to read those inputs still before processing.
 
 
 
@@ -526,7 +526,7 @@ public class OrderProcessor {
 
 
 
-&#x09;Refactoring makes code much more readable and simpler. It also makes it so that we only need to change a specific section rather than the whole codebase. 
+&#x09;Refactoring makes code much more readable and simpler. It also makes it so that we only need to change a specific section rather than the whole codebase.
 
 
 
@@ -534,7 +534,7 @@ public class OrderProcessor {
 
 
 
-**Poor comment:** 
+**Poor comment:**
 
 
 
@@ -542,7 +542,7 @@ int total = price + tax; // add price and tax
 
 
 
-**Good comment:** 
+**Good comment:**
 
 
 
@@ -556,7 +556,7 @@ int total = price + tax; // includes VAT for local compliance
 
 
 
-&#x09;You should write comments in lines of codes that might cause confusion or if it can't explain for itself. You also use comments for possible future improvements limits or explaining what a big code block do and why it was there. 
+&#x09;You should write comments in lines of codes that might cause confusion or if it can't explain for itself. You also use comments for possible future improvements limits or explaining what a big code block do and why it was there.
 
 
 
@@ -595,6 +595,7 @@ public class Calculator {
 &#x20;   }
 
 }
+
 
 
 
@@ -928,6 +929,26 @@ public class OrderSystem {
 
 
 &#x09;Refactoring it made the code cleaner, modular, and much easier to maintain as you only have to make changes in specific parts to fix issues if there was any. Unlike in the original where it is one single function and is reliant to the whole structure for it to work.
+
+
+
+
+
+
+
+**How do unit tests help keep code clean?**
+
+
+
+&#x09;Unit test keep code clean because they push you toward writing code that is easier to understand, smaller, and more modular. Although it doesn't clean it themselves, but code that is easy to test is a clean code.
+
+
+
+**What issues did you find while testing?**
+
+
+
+&#x09;There were functions that does too many things and there were code blocks that doesn't check for errors properly before proceeding with handling the inputs.
 
 
 
