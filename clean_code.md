@@ -671,3 +671,263 @@ public class Calculator {
 
 
 
+**Overly complicated code:**
+
+
+
+public class OrderSystem {
+
+
+
+&#x20;   public static void process(String name, String email, String\[] items, double\[] prices, boolean member) {
+
+
+
+&#x20;       if (name != null) {
+
+&#x20;           if (email.contains("@")) {
+
+&#x20;               if (items.length > 0) {
+
+
+
+&#x20;                   double total = 0;
+
+
+
+&#x20;                   for (int i = 0; i < prices.length; i++) {
+
+&#x20;                       if (prices\[i] > 0) {
+
+&#x20;                           total = total + prices\[i];
+
+&#x20;                       } else {
+
+&#x20;                           System.out.println("Invalid price detected");
+
+&#x20;                       }
+
+&#x20;                   }
+
+
+
+&#x20;                   double discount = 0;
+
+
+
+&#x20;                   if (member == true) {
+
+&#x20;                       discount = total \* 0.1;
+
+&#x20;                   } else {
+
+&#x20;                       if (total > 1000) {
+
+&#x20;                           discount = total \* 0.05;
+
+&#x20;                       }
+
+&#x20;                   }
+
+
+
+&#x20;                   double finalTotal = total - discount;
+
+
+
+&#x20;                   double tax = finalTotal \* 0.12;
+
+&#x20;                   finalTotal = finalTotal + tax;
+
+
+
+&#x20;                   System.out.println("Customer: " + name);
+
+&#x20;                   System.out.println("Email: " + email);
+
+
+
+&#x20;                   for (int i = 0; i < items.length; i++) {
+
+&#x20;                       System.out.println(items\[i] + " - " + prices\[i]);
+
+&#x20;                   }
+
+
+
+&#x20;                   System.out.println("Total: " + finalTotal);
+
+
+
+&#x20;               }
+
+&#x20;           }
+
+&#x20;       }
+
+&#x20;   }
+
+}
+
+
+
+**Clean and refactored:**
+
+
+
+public class OrderSystem {
+
+
+
+&#x20;   public static void process(String name, String email, String\[] items, double\[] prices, boolean member) {
+
+
+
+&#x20;       if (!validateInput(name, email, items, prices)) return;
+
+
+
+&#x20;       double total = calculateTotal(prices);
+
+&#x20;       double discount = calculateDiscount(total, member);
+
+&#x20;       double finalTotal = applyTax(total - discount);
+
+
+
+&#x20;       printReceipt(name, email, items, prices, total, discount, finalTotal);
+
+&#x20;   }
+
+
+
+&#x20;   // 1. Validation (Guard Clauses)
+
+&#x20;   private static boolean validateInput(String name, String email, String\[] items, double\[] prices) {
+
+
+
+&#x20;       if (name == null || name.isEmpty()) return false;
+
+
+
+&#x20;       if (email == null || !email.contains("@")) return false;
+
+
+
+&#x20;       if (items == null || items.length == 0) return false;
+
+
+
+&#x20;       if (prices == null || prices.length == 0) return false;
+
+
+
+&#x20;       return true;
+
+&#x20;   }
+
+
+
+&#x20;   // 2. Calculate total
+
+&#x20;   private static double calculateTotal(double\[] prices) {
+
+&#x20;       double total = 0;
+
+
+
+&#x20;       for (double price : prices) {
+
+&#x20;           if (price > 0) {
+
+&#x20;               total += price;
+
+&#x20;           }
+
+&#x20;       }
+
+
+
+&#x20;       return total;
+
+&#x20;   }
+
+
+
+&#x20;   // 3. Discount logic
+
+&#x20;   private static double calculateDiscount(double total, boolean member) {
+
+&#x20;       if (member) return total \* 0.10;
+
+&#x20;       if (total > 1000) return total \* 0.05;
+
+&#x20;       return 0;
+
+&#x20;   }
+
+
+
+&#x20;   // 4. Tax calculation
+
+&#x20;   private static double applyTax(double amount) {
+
+&#x20;       return amount \* 1.12;
+
+&#x20;   }
+
+
+
+&#x20;   // 5. Output
+
+&#x20;   private static void printReceipt(String name, String email, String\[] items, double\[] prices,
+
+&#x20;                                    double total, double discount, double finalTotal) {
+
+
+
+&#x20;       System.out.println("\\n--- RECEIPT ---");
+
+&#x20;       System.out.println("Customer: " + name);
+
+&#x20;       System.out.println("Email: " + email);
+
+
+
+&#x20;       for (int i = 0; i < items.length; i++) {
+
+&#x20;           System.out.println(items\[i] + " - " + prices\[i]);
+
+&#x20;       }
+
+
+
+&#x20;       System.out.println("Subtotal: " + total);
+
+&#x20;       System.out.println("Discount: " + discount);
+
+&#x20;       System.out.println("Total: " + finalTotal);
+
+&#x20;   }
+
+}
+
+
+
+**What made the original code complex?**
+
+
+
+&#x09;The original code is structured as one singular function. The whole function does everything and there were no separation of responsibilities.
+
+
+
+**How did refactoring improve it?**
+
+
+
+&#x09;Refactoring it made the code cleaner, modular, and much easier to maintain as you only have to make changes in specific parts to fix issues if there was any. Unlike in the original where it is one single function and is reliant to the whole structure for it to work.
+
+
+
