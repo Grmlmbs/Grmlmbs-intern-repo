@@ -570,4 +570,104 @@ int total = price + tax; // includes VAT for local compliance
 
 
 
+**Code with poor error handling:**
+
+
+
+public class Calculator {
+
+
+
+&#x20;   public static int divide(int a, int b) {
+
+&#x20;       return a / b;
+
+&#x20;   }
+
+
+
+&#x20;   public static void main(String\[] args) {
+
+&#x20;       int result = divide(10, 0);
+
+&#x20;       System.out.println("Result: " + result);
+
+&#x20;   }
+
+}
+
+
+
+
+**Code with good error handling:**
+
+
+
+public class Calculator {
+
+
+
+&#x20;   public static Integer divide(int a, int b) {
+
+
+
+&#x20;       // Guard clause: handle invalid input early
+
+&#x20;       if (b == 0) {
+
+&#x20;           System.out.println("Error: Cannot divide by zero.");
+
+&#x20;           return null; // or you could return 0 depending on your design
+
+&#x20;       }
+
+
+
+&#x20;       return a / b;
+
+&#x20;   }
+
+
+
+&#x20;   public static void main(String\[] args) {
+
+
+
+&#x20;       Integer result = divide(10, 0);
+
+
+
+&#x20;       if (result != null) {
+
+&#x20;           System.out.println("Result: " + result);
+
+&#x20;       } else {
+
+&#x20;           System.out.println("Calculation failed.");
+
+&#x20;       }
+
+&#x20;   }
+
+}
+
+
+
+**What was the issue with the original code?**
+
+
+
+&#x09;it didn't check if the input is a valid one and if you didn't do the necessary validation of inputs the program might fail and will render the code unusable.
+
+
+
+**How does handling errors improve reliability?**
+
+
+
+&#x09;Handling errors can improve reliability as proper error handling will make your function run properly and run without the threat of failing. handling errors also makes it more robust and ensure that if an error occurs, the code can recover on its own with minimal and predictable interventions.
+
+
+
+
 
