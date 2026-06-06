@@ -2,7 +2,7 @@ clean\_code
 
 
 
-**Messy code:** 
+**Messy code:**
 
 
 
@@ -53,4 +53,28 @@ public class Main {
 &#x09;}
 
 }
+
+
+
+**What makes a good variable or function name?** 
+
+
+
+&#x09;A good function and variable name are concise and descriptive of what that variable and class is for and what does it do in the entire codebase.
+
+
+
+**What issues can arise from poorly named variables?** 
+
+
+
+&#x09;Poorly named variables can cause confusion and ambiguity. Instead of helping other developers understand your code, it might make it hard for them to figure out and understand what you've done.
+
+
+
+**How did refactoring improve code readability?**
+
+
+
+&#x09;Refactoring can make the code simpler and a lot more manageable. it can also optimize the certain code blocks to help it run smoother and prevent unnecessary confusions.
 
