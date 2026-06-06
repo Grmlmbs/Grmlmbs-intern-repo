@@ -127,5 +127,27 @@ git\_understanding
 
 
 
+**What is the difference between staging and committing?**
+
+&#x09;
+
+&#x09;Staging is preparing what to be changed much like how you pack a package before you send it while committing saving the selected changes to history much like shipping the packaged changes.
+
+
+
+**Why does Git separate these two steps?** 
+
+
+
+&#x09;This serves as much like a two factor authentication but for saving changes. This way you can freely modify the changes and pick which changes you will ship. This makes things safer and more flexible.
+
+
+
+**When would you want to stage changes without committing?** 
+
+
+
+&#x09;I think you should typically do this if you just want to save changes but don't want to commit yet.
+
 
 
