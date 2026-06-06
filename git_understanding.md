@@ -74,7 +74,7 @@ git\_understanding
 
 
 
-**What does each command do?** 
+**What does each command do?**
 
 
 
@@ -88,7 +88,7 @@ git\_understanding
 
 
 
-**When would you use it in a real project?** 
+**When would you use it in a real project?**
 
 
 
@@ -96,9 +96,36 @@ git\_understanding
 
 
 
-**What surprised you while testing these commands?** 
+**What surprised you while testing these commands?**
 
 
 
 &#x09;I'm surprised that you can actually see a lot more details about the commits. This makes things easier to debug and actually lessen time in debugging an issue.
+
+
+
+**Why is pushing directly to main problematic?** 
+
+
+
+&#x09;Pushing to the main is problematic because every change needs to be tested first as changes might carry unchecked conflicts or conflicts that is not accounted for. This conflicts might cause the production to fail and it would be a headache for the organization because the app will be essentially downed while the issue exists and the organization will lose money in return.
+
+
+
+**How does branches help with reviewing code?** 
+
+
+&#x09;Branches help in reviewing code because it is essentially a copy of the main branch so it is safer to test changes on a branch and you can review if everything is working before pushing it to production. 
+
+
+
+**What happens if two people edit the same file on different branches?** 
+
+
+
+&#x09;This will cause a conflict during the merging and it would require resolving before anyone push it to the main branch to be merged.
+
+
+
+
 
