@@ -24,3 +24,27 @@ git\_understanding
 
 &#x09;Reviewing an open source PR made me learn that PRs should be comprehensive and should include technical details that made the changes what it is. It also should include steps on how to test the change so that the reviewer can properly test it before approving for it.
 
+
+
+**What makes a good commit message?** 
+
+
+
+&#x09;Good commit messages are usually short, specific, and action-oriented. It includes new features added, fixes made, refactors, documentation, style, test and maintenance. 
+
+
+
+**How does a clear commit message help in team collaboration?** 
+
+&#x09;
+
+&#x09;It helps team understand what was the changes for and what to expect that changed by making certain commits. It also narrows the review and makes reviewing faster.
+
+
+
+**How can poor commit messages issues later?**
+
+
+
+&#x09;Poor commit messages such as vague messages, ambiguous, or lacks conclusive details can make debugging later on if it caused any issues. And that on its own can cost the organization money, time and effort just to figure out what went wrong.
+
