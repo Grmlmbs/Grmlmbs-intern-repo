@@ -534,6 +534,40 @@ public class OrderProcessor {
 
 
 
+**Poor comment:** 
+
+
+
+int total = price + tax; // add price and tax
+
+
+
+**Good comment:** 
+
+
+
+int total = price + tax; // includes VAT for local compliance
+
+
+
+
+
+**When should you add comments?**
+
+
+
+&#x09;You should write comments in lines of codes that might cause confusion or if it can't explain for itself. You also use comments for possible future improvements limits or explaining what a big code block do and why it was there. 
+
+
+
+**When should you avoid comments and instead improve code?**
+
+
+
+&#x09;If it is pretty much self explanatory you don't have to put comment for it, just name your variables properly and improve the overall readability of the code block.
+
+
+
 
 
 
