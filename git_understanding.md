@@ -50,7 +50,7 @@ git\_understanding
 
 
 
-**What does git bisect do?** 
+**What does git bisect do?**
 
 
 
@@ -58,7 +58,7 @@ git\_understanding
 
 
 
-**When would you use it in a real-world debugging situation?** 
+**When would you use it in a real-world debugging situation?**
 
 
 
@@ -66,9 +66,39 @@ git\_understanding
 
 
 
-**How does it compare to manually reviewing commits?** 
+**How does it compare to manually reviewing commits?**
 
 &#x09;
 
 &#x09;Manually reviewing commits would take you more time just to identify a problem as supposed to using git bisect, you can find the problem faster and resolve the issue in a much earlier time.
+
+
+
+**What does each command do?** 
+
+
+
+**git checkout main -- <file> :** helps you restore file from the main without affecting other changes.
+
+**git cherry-pick <commit>** : This apply a specific commit from another branch without merging the whole branch.
+
+**git log :** Shows you your commit history.
+
+**git blame <file>** : See who last modified a line in the file and when was it modified.
+
+
+
+**When would you use it in a real project?** 
+
+
+
+&#x09;This would typically be commonly used when your trying to resolve or fix an issue in the production and to pinpoint what caused it we will use this commands to check when, what, how, why and who might've caused it.
+
+
+
+**What surprised you while testing these commands?** 
+
+
+
+&#x09;I'm surprised that you can actually see a lot more details about the commits. This makes things easier to debug and actually lessen time in debugging an issue.
 
