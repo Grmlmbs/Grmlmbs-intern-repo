@@ -2,7 +2,11 @@ docker-intro
 
 
 
-**How does Docker differ from a virtual machine?** 
+#### **5.1 What is Docker and Why Use It?**
+
+
+
+**How does Docker differ from a virtual machine?**
 
 
 
@@ -31,8 +35,4 @@ docker-intro
 
 
 &#x09;The downside I'm seeing is it would take some time to learn how to use it properly and there would probably be a learning curve to use it. Mainly because of the reason that it runs through network and that on its own can introduce quite a lot of headaches and issues that will take some time figuring especially if it is your first time handling it.
-
-
-
-
 
